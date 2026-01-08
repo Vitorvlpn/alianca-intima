@@ -1,36 +1,72 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Aliança Íntima - Intimidade com Propósito</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Aliança Íntima - Intimidade com Propósito</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
   <h1>ALIANÇA ÍNTIMA</h1>
   <p>Intimidade com propósito</p>
+  <nav>
+    <a href="index.html">Produtos</a>
+    <a href="sobre.html">Sobre Nós</a>
+  </nav>
 </header>
 
-<section class="intro">
-  <p>
-    Um espaço criado para fortalecer a intimidade no casamento,
-    com respeito, discrição e propósito.
-  </p>
+<section class="filters">
+  <select id="categoryFilter">
+    <option value="all">Todas as categorias</option>
+    <option value="lingerie">Lingerie</option>
+    <option value="fantasia">Fantasia</option>
+    <option value="casal">Casais</option>
+  </select>
+
+  <select id="sortFilter">
+    <option value="default">Relevância</option>
+    <option value="low">Menor preço</option>
+    <option value="high">Maior preço</option>
+  </select>
 </section>
 
-<section class="products">
-  <div class="card">
-    <div class="image">
+<section class="products" id="productList">
+
+  <div class="card" data-category="lingerie" data-price="129">
+    <a href="#" onclick="openImage('https://via.placeholder.com/600')">
+      <img src="https://via.placeholder.com/300">
       <span>Visualização protegida</span>
-    </div>
-    <h3>Produto Exemplo</h3>
-    <p class="price">R$ 129,00</p>
+    </a>
+    <h3>Lingerie Elegance</h3>
+    <p>R$ 129,00</p>
+    <button onclick="buy()">Comprar</button>
   </div>
+
+  <div class="card" data-category="fantasia" data-price="159">
+    <a href="#" onclick="openImage('https://via.placeholder.com/600')">
+      <img src="https://via.placeholder.com/300">
+      <span>Visualização protegida</span>
+    </a>
+    <h3>Fantasia Clássica</h3>
+    <p>R$ 159,00</p>
+    <button onclick="buy()">Comprar</button>
+  </div>
+
+  <div class="card" data-category="casal" data-price="199">
+    <a href="#" onclick="openImage('https://via.placeholder.com/600')">
+      <img src="https://via.placeholder.com/300">
+      <span>Visualização protegida</span>
+    </a>
+    <h3>Kit Casal Conexão</h3>
+    <p>R$ 199,00</p>
+    <button onclick="buy()">Comprar</button>
+  </div>
+
 </section>
 
 <footer>
-  © 2026 • Aliança Íntima
+  © 2026 • Aliança Íntima • Conteúdo exclusivo para casais
 </footer>
 
 <script src="script.js"></script>
