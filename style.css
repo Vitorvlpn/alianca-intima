@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background: #fff;
+  text-align: center;
+  padding: 30px;
+  border-bottom: 1px solid #ddd;
+}
+
+.intro {
+  max-width: 600px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.products {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  width: 250px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.image {
+  height: 200px;
+  background: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+}
+
+.price {
+  font-weight: bold;
+}
