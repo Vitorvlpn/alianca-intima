@@ -2,9 +2,20 @@ function openImage(url){
   window.open(url, "_blank");
 }
 
-function buy(){
-  window.open("https://wa.me/55SEUNUMERO", "_blank");
+function buy(produto, preco){
+  const numero = "5599999999999"; // 👈 COLOQUE SEU WHATSAPP AQUI
+  const mensagem = `
+Olá! Tenho interesse no produto abaixo:
+
+🛍️ Produto: ${produto}
+💰 Valor: R$ ${preco}
+
+Gostaria de finalizar a compra.
+`;
+  const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+  window.open(url, "_blank");
 }
+
 
 const categoryFilter = document.getElementById("categoryFilter");
 const sortFilter = document.getElementById("sortFilter");
@@ -30,3 +41,4 @@ sortFilter.addEventListener("change", ()=>{
 
   items.forEach(i=>list.appendChild(i));
 });
+
